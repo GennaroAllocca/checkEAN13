@@ -8,7 +8,7 @@ function checkEan13(eanCode) {
 		}
 	}
 
-	// should check the length of encCode
+	// should check the length of eanCode
 	if (eanCode.length != 13) {
 		return false;
 	}
@@ -38,14 +38,13 @@ function checkEan13(eanCode) {
 	// Sum even and odd
 	totalSum = evenNumber + oddNumber;
 
-    // Store the remainder obtained by dividing totatlSum by 10
+    // Store the remainder obtained by dividing totalSum by 10
     checkResult = totalSum % 10;
-    // If checkResult is not 0 then take away 10
     // If checkResult is not 0 then remove 10
     if (checkResult != 0) {
         checkResult = 10 - checkResult;
     }
-	// check if checkResult is equal numberCheck
+	// check if checkResult is equal to numberCheck
 	if (checkResult != numberCheck) {
 		return false;
 	}
