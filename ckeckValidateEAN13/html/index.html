@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../js/checkEAN13.js"></script>
+    <script>
+    function alertTestEAN13(resultEAN13){
+      if(resultEAN13) {
+         alert("EAN-13 is correct");
+      } else {
+        alert("EAN-13 is not correct");
+      }
+    }
+    </script>
+    </head>
+      <body>
+        <div class="container">
+          <h2>Test an EAN-13</h2>
+            <input type="number" id="barcoder18"  />
+            <input type="button" class="btn btn-success" value="TEST" onclick="alertTestEAN13(checkEan13(barcoder18.value))"/>
+        </div>
+      </body>
+</html>
